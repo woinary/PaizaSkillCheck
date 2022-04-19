@@ -1,5 +1,17 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
 func main() {
-	num_unit := bufio.NewScannr(os.Stdin)
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+
+	num_unit, _ := strconv.Atoi(sc.Text())
 	unit_length := num_unit * 25
-	print(unit_length)
+	fmt.Println(unit_length)
 }

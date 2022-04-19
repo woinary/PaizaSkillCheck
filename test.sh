@@ -25,8 +25,9 @@ case "$1" in
     echo "test Swift code..."
     ;;
   "go" ) 
-    target_extention="go"
-    target_executor="go run"
+    target_extention="out"
+    source_extention="go"
+    require_build="go build"
     echo "test Go code..."
     ;;
   "c" ) 
@@ -55,7 +56,7 @@ case "$1" in
 esac
 
 ## ビルドが必要なものはやっておく
-if test $require_build != "none" ; then
+if test "$require_build" != "none" ; then
   for s in *.$source_extention; do
     $require_build -o ${s/$source_extention/out} $s
   done
@@ -65,7 +66,7 @@ fi
 count_OK=0
 count_NG=0
 for e in *.$target_extention; do
-  if test $require_build != "" ; then
+  if test "$require_build" != "" ; then
     e="./$e"
   fi
   for f in input_*.txt; do
@@ -85,7 +86,7 @@ done
 ## 後処理
 rm temp_output
 echo "test done(OK:$count_OK,NG:$count_NG)"
-if test $require_build != "none" ; then
+if test "$require_build" != "none" ; then
   for e in *.$target_extention; do
     rm $e
   done
