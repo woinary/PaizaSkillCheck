@@ -20,8 +20,8 @@ case "$1" in
     echo "test Perl code..."
     ;;
   "swift" | "sw" ) 
-    target_extention="pl"
-    target_executor="perl"
+    target_extention="swift"
+    target_executor="swift"
     echo "test Swift code..."
     ;;
   "go" ) 
