@@ -1,5 +1,5 @@
 # Paizaスキルチェック用テスト環境
-![GitHub](https://img.shields.io/github/license/woinary/PaizaSkillCheck) ![Lines of code](https://img.shields.io/tokei/lines/github/woinary/PaizaSkillCheck)
+![GitHub last commit](https://img.shields.io/github/last-commit/woinary/PaizaSkillCheck) ![GitHub](https://img.shields.io/github/license/woinary/PaizaSkillCheck)
 
 ## 概要
 [Paiza](https://paiza.jp/)の[スキルチェック](https://paiza.jp/challenges)を行う際に、通常は提出先の実行環境や[Paiza.io](https://paiza.io/ja)を使用するかと思いますが、テストケースを都度都度入力するのも面倒です。
