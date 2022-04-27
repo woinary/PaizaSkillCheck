@@ -14,6 +14,7 @@ usage() {
     echo "    go"
     echo "    c"
     echo "    c++ or cpp or c+ or cp"
+    echo "    rust or rs"
 }
 
 ## メイン
@@ -50,12 +51,14 @@ case "$2" in
   "c" ) 
     target="c"
     echo "create directory and templates for C..."
-    echo "test C code..."
     ;;
   "c++" | "cpp" | "c+" | "cp") 
     target="cpp"
     echo "create directory and templates for C++..."
-    echo "test C++ code..."
+    ;;
+  "rust" | "rs" ) 
+    target="rs"
+    echo "create directory and templates for Rust..."
     ;;
   * )
     usage

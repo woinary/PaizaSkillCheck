@@ -42,6 +42,12 @@ case "$1" in
     require_build="g++"
     echo "test C++ code..."
     ;;
+  "rust" | "rs") 
+    target_extention="out"
+    source_extention="rs"
+    require_build="rustc"
+    echo "test Rust code..."
+    ;;
   * )
     echo "argument is language."
     echo "ex) python or py"
@@ -51,6 +57,7 @@ case "$1" in
     echo "    go"
     echo "    c"
     echo "    c++ or cpp or c+ or cp"
+    echo "    rust or rs"
     exit 1
     ;;
 esac
