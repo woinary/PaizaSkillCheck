@@ -15,6 +15,7 @@ usage() {
     echo "    c"
     echo "    c++ or cpp or c+ or cp"
     echo "    rust or rs"
+    echo "    javascript or js"
 }
 
 ## メイン
@@ -39,6 +40,10 @@ case "$2" in
   "perl" | "pl" ) 
     target="pl"
     echo "create directory and templates for Perl..."
+    ;;
+  "javascript" | "js" ) 
+    target="js"
+    echo "create directory and templates for JavaScript..."
     ;;
   "swift" | "sw" ) 
     target="swift"
@@ -78,3 +83,6 @@ for f in 001 002 ; do
     touch $dir_name/input_$f.txt
     touch $dir_name/output_$f.txt
 done
+
+## テスト用ディレクトリへ移動
+cd "$dir_name"

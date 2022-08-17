@@ -82,10 +82,12 @@ test done(OK:1,NG:1)
 python
 ruby
 perl
+JavaScript(Node.js)
 swift
 Go
 C
 C++
+Rust
 ```
 
 対応言語の追加等、適宜修正してご利用ください。難しいことはしておりませんので、Paizaスキルチェックをやっておられる方なら難なく修正できるかと思われます。

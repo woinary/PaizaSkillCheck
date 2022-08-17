@@ -19,6 +19,11 @@ case "$1" in
     target_executor="perl"
     echo "test Perl code..."
     ;;
+  "javascript" | "js" ) 
+    target_extention="js"
+    target_executor="node"
+    echo "test JavaScript(Node.js) code..."
+    ;;
   "swift" | "sw" ) 
     target_extention="swift"
     target_executor="swift"
@@ -53,6 +58,7 @@ case "$1" in
     echo "ex) python or py"
     echo "    ruby or rb"
     echo "    perl or pl"
+    echo "    javascript or js"
     echo "    swift or sw"
     echo "    go"
     echo "    c"
